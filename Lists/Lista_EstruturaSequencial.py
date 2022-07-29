@@ -199,3 +199,267 @@ dd, mm, aa = input().split('/')
 print(f'{dd}-{mm}-{aa}')
 print(f'{mm}-{dd}-{aa}')
 print(f'{aa}/{mm}/{dd}')
+
+#QUESTÃO 11
+"""
+Nessa questão, você terá 5 pares de números e para cada um deles deverá ser impresso o maior número do par. A função responsável por realizar a essa operação deverá chamar maiorAB e receber dois valores numéricos.
+
+Entrada
+A entrada consiste de 5 linhas, com cada uma contendo 2 inteiros a,b separados por espaços.
+
+Saída
+Para cada par, imprima o maior dos dois números.
+
+
+Particularidade do Tópico
+Atenção, a criação de uma função com o nome determinado pelo enunciado é fundamental para a prática do aluno e o Moodle irá descontar pontos, por esse critério, caso a criação não tenha sido feita corretamente (sendo case-sensitive o nome da função).
+"""
+
+def maiorAB (x,y):
+    z = max(x,y)
+    print(z)
+        
+for i in range (1,6):
+    x,y = input().split()
+    x,y = int(x),int(y)
+    
+    maiorAB(x,y)
+
+#QUESTÃO 12 
+"""
+Nessa questão, você terá de ler 5 pares de valores inteiros e imprimí-los com a ordem entre eles trocada. A função responsável por realizar a troca deverá chamar trocarAB e receber os dois valores a serem trocados.
+
+Entrada
+A entrada consiste de 5 linhas, com cada uma contendo 2 números a,b.
+
+Saída
+Para cada par, imprima o par inserido com a ordem trocada.
+
+Particularidade do Tópico
+Atenção, a criação de uma função com o nome determinado pelo enunciado é fundamental para a prática do aluno e o Moodle irá descontar pontos, por esse critério, caso a criação não tenha sido feita corretamente (sendo case-sensitive o nome da função).
+
+
+"""
+def trocarAB(x,y):
+    print(y,x)
+    
+for i in range (1,6):
+    x,y = input().split()
+    x,y = int(x),int(y)
+    
+    trocarAB(x,y)
+
+#QUESTÃO 13
+"""
+Mellin é um lendário feiticeiro conhecido por toda a terra tupiniquim. Cercado por mistérios, ninguém conhece ao certo o que ele faz ou de onde veio, são apenas lendas. Recentemente, em uma de suas escavações, o Instituto Brilhante de Grandes Escavações (IBGE) encontrou três números misteriosos em ruínas de um lugar que Mellin supostamente viveu.  A principal teoria é que um destes números representa a idade de Mellin em dias, no momento em que foram escritos. O problema é que eles não conseguem saber qual desses números seria a idade e precisam compará-los, porém meros mortais têm dificuldade em entender idades em dias.
+
+Dessa forma, o IBGE lançou um Programa Internacional Brilhante de Iniciação Científica (PIBIC) de modo que estudantes universitários ao redor do mundo iriam ajudar a entender estas datas. O seu papel é dizer quantos anos, meses e dias representam cada um dos três números misteriosos. Para facilitar o entendimento, o IBGE pediu que uma função chamada age que recebe a quantidade dias a serem calculadas fosse implementada. Essa função deve transformar e imprimir essa informação em anos, meses e dias.
+
+IMPORTANTE: No mundo de Mellin, todos os anos têm 360 dias e todos os meses têm 30 dias.
+
+Entrada
+A entrada consiste de 3 números diferentes guardados pelas variáveis a,b,c≥3, separadas por espaço.
+
+
+Saída
+Para cada um dos três números, imprima quantos anos, meses e dias seriam no seguinte formato:
+
+
+
+{A} ano(s), {M} mes(es) e {D} dia(s)
+Particularidade do Tópico
+Atenção, a criação de uma função com o nome determinado pelo enunciado é fundamental para a prática do aluno e o Moodle irá descontar pontos, por esse critério, caso a criação não tenha sido feita corretamente (sendo case-sensitive o nome da função).
+"""
+
+
+def age(num):
+    anos = num//360
+    meses = (num % 360)//30
+    dias = (num % 360) % 30
+    print(f'{anos} ano(s), {meses} mes(es) e {dias} dia(s)')
+
+
+code = input('')
+codes = code.split()
+for item in codes:
+    age(int(item))
+
+
+#QUESTÃO 14
+"""
+Faça um programa que leia idades de três pessoas em dias e mostre suas idades em anos, meses e dias. Considere que todo ano contém 360 dias e todo mês tem 30 dias. A função deve chamar age e receber como parâmetro SOMENTE a quantidade de dias em uma única variável.
+
+Entrada
+A entrada contém três números inteiros 1≤d1,d2,d3≤106, a idade de cada uma das 3 pessoas, em dias.
+
+Saída
+Para cada uma das três idades, você deve imprimir: Três inteiros separados por espaço A, M e D , representando a idade da pessoa em anos, meses e dias, respectivamente.
+
+
+Particularidade do Tópico
+Atenção, a criação de uma função com o nome determinado pelo enunciado é fundamental para a prática do aluno e o Moodle irá descontar pontos, por esse critério, caso a criação não tenha sido feita corretamente (sendo case-sensitive o nome da função).
+"""
+
+
+def age(num):
+    anos = num//360
+    meses = (num % 360)//30
+    dias = (num % 360) % 30
+    print(f'{anos} {meses} {dias}')
+
+
+code = input('')
+codes = code.split()
+for item in codes:
+    age(int(item))
+
+
+#QUESTÃO 15
+"""
+Escreva um programa que leia, para uma determina pessoa, a altura da mesma. Este programa deve utilizar uma função chamada peso_ideal que recebe como parâmetro a altura em ponto flutuante e  imprime o peso ideal para homem e mulher.
+
+Para homens, deve-se calcular o peso ideal usando a fórmula de peso ideal = 72.7 x alt - 58 e, para mulheres, peso ideal = 62.1 x alt - 44.7.
+
+Entrada
+A entrada consiste de um de valor em ponto flutuante indicando a altura em metros (1.0≤alt≤2.2) 
+
+Saída 
+O peso ideal da pessoa, com duas casas decimais considerando o cálculo para homem e mulher.
+
+Particularidade do Tópico
+Atenção, a criação de uma função com o nome determinado pelo enunciado é fundamental para a prática do aluno e o Moodle irá descontar pontos, por esse critério, caso a criação não tenha sido feita corretamente (sendo case-sensitive o nome da função).
+"""
+
+z = input('')
+z = float(z)
+
+
+def peso_ideal(x):
+    peso_mulher = 62.1 * x - 44.7
+    peso_homem = 72.7 * x - 58
+    print(f'%.2f' % (peso_homem,), f'%.2f' % (peso_mulher))
+
+
+peso_ideal(z)
+
+#QUESTÃO 16
+"""
+Dada a descrição de um horário, diga quantos segundos já se passaram no dia conforme o formato definido abaixo.
+
+Entrada
+A entrada consiste de uma linha, composta por três números inteiros representando um horário no dia, apresentados no formato "hh:mm:ss" (hora:minutos:segundo). 
+
+Saída
+A saída deve ser composta de uma linha apresentando a mensagem: "La se foram X segundos que nao voltam mais...", onde X é a quantidade total de segundos decorridos desde o início do horário.
+"""
+
+hora, minutos, segundos = [int(n) for n in input().split(':')]
+total = hora*3600 + minutos*60 + segundos
+print(f'La se foram {total} segundos que nao voltam mais...')
+
+#QUESTÃO 17
+"""
+Escreva um programa que transforme números decimais em binário. Seu programa deve ler 5 números inteiros e para cada um deles deve imprimir sua representação em código binário. A função responsável pela transformação deve se chamar binario e receber como parâmetro um número inteiro. 
+
+Entrada
+A entrada consiste de 5 linhas, com cada uma contendo 1 número a≥0 inteiro.
+
+Saída
+Para cada número, imprima sua representação em binário no formato 0b[numero em binário]
+
+Particularidade do Tópico
+
+Atenção, a criação de uma função com o nome determinado pelo enunciado é fundamental para a prática do aluno e o Moodle irá descontar pontos, por esse critério, caso a criação não tenha sido feita corretamente (sendo case-sensitive o nome da função).
+"""
+
+
+for i in range(5):
+    x = int(input())
+
+    def binario(x):
+        bina = format(x, "b")
+        print(f"0b{bina}")
+    binario(x)
+
+#QUESTÃO 18
+"""
+Escreva um programa que transforme números decimais em hexadecimal. Seu programa deve ler 5 números inteiros e para cada um deles deve imprimir sua representação em código hexadecimal. A função responsável pela transformação deve chamar hexadecimal e receber como parâmetro um número inteiro. 
+
+Entrada
+A entrada consiste de 5 linhas, com cada uma contendo 1 número a≥0 inteiro.
+
+Saída
+Para cada número, imprima sua representação em hexadecimal no formato 0x[numero em hexadecimal]
+
+Particularidade do Tópico
+
+Atenção, a criação de uma função com o nome determinado pelo enunciado é fundamental para a prática do aluno e o Moodle irá descontar pontos, por esse critério, caso a criação não tenha sido feita corretamente (sendo case-sensitive o nome da função).
+"""
+
+for i in range (5):
+    x = int(input())
+    
+    def hexadecimal (x):
+        hexa = hex(x)
+        print(hexa)
+    hexadecimal(x)
+    
+#QUESTÃO 19 
+"""
+O Decanato de Graduação (DEG) está testando uma nova funcionalidade no SIGAA que permite apresentar a quantidade de períodos que um determinado estudante já concluiu na Universidade de Brasília. Para isso, o DEG aproveita as informações de ingresso na UnB existentes no próprio número de matrícula dos alunos e compara com o ano e o semestre atual. Como se sabe, os quatro dígitos mais significativos d1,d2,d3 e d4 do número de matrícula indicam o ano e o semestre de ingressos do aluno na UnB.
+
+Por exemplo, se o número de matrícula de um estudante é 190199999, os quatro dígitos mais significativos formam o número 1901, em que adota-se a convenção (d1=1,d2=9,d3=0,d4=1). O número formado da combinação de d1 e d2, 19, indicam que o aluno ingressou na UnB em 2019 e o d4=1 mostra que o aluno ingressou no segundo semestre desse ano. Outro exemplo se trata do número de matrícula 180099899, que indica que estudante ingressou na UnB no primeiro semestre de 2018.
+
+Elabore uma função chamada  quantosSemestres que receba como parâmetros três números inteiros m, a e s associados ao número de matrícula do aluno, o ano atual e o semestre atual, respectivamente. Essa função deve calcular a quantidade mínima de semestres (concluídos) em que o referido aluno está na UnB.
+
+Entrada
+
+A entrada compreende os parâmetros da função quantosSemestres, que são três números inteiros m, a e s  (100000000≤m≤500000000,2010≤a≤2050,s∈{0,1} ) associados ao número de matrícula do aluno, o ano atual e o semestre atual, respectivamente. É garantido que o ano e o semestre atual do aluno são maiores ou iguais ao ano e semestre de ingresso na UnB. 
+
+Saída
+
+A função quantosSemestres deve imprimir a quantidade mínima de semestres em que o aluno associado ao número de matrícula está na UnB.
+
+Notas
+
+i) No primeiro caso de teste, de acordo com o número de matrícula, o aluno ingressou na UnB no primeiro semestre de 2020 e o semestre atual também é o primeiro semestre de 2020. Portanto, o aluno ainda não concluiu nenhum semestre. 
+
+ii) No segundo caso de teste, de acordo com o número de matrícula, o aluno ingressou na UnB no primeiro semestre de 2020 e o semestre atua é o segundo semestre de 2020. Portanto, o aluno concluiu um período na UnB.
+"""
+
+def quantosSemestres(registro, ano_corrente, semestre_corrente):
+    ano = int(str(registro)[0:2]) + 2000
+    semestre = int(str(registro)[3])
+    print(((ano_corrente - ano)*2) - semestre + semestre_corrente)
+
+#QUESTÃO 20
+
+"""
+O Decanato de Graduação (DEG) está testando uma nova funcionalidade no SIGAA que permite apresentar em qual semestre um aluno da Universidade de Brasília se encontra. Para isso, o DEG aproveita as informações de ingresso na UnB existentes no próprio número de matrícula dos alunos e compara com o ano e o semestre atual. Como se sabe, os quatro dígitos mais significativos d1,d2,d3 e d4 do número de matrícula indicam o ano e o semestre de ingressos do aluno na UnB.
+
+Por exemplo, se o número de matrícula de um estudante é 190199999, os quatro dígitos mais significativos formam o número 1901, em que adota-se a convenção (d1=1,d2=9,d3=0,d4=1). O número formado da combinação de d1 e d2, 19, indicam que o aluno ingressou na UnB em 2019 e o d4=1 mostra que o aluno ingressou no segundo semestre desse ano. Outro exemplo se trata do número de matrícula 180099899, que indica que estudante ingressou na UnB no primeiro semestre de 2018.
+
+Elabore uma função chamada  qualPeriodo que receba como parâmetros três números inteiros m, a e s associados ao número de matrícula do aluno, o ano atual e o semestre atual, respectivamente. Essa função deve calcular o semestre atual em que o aluno se encontra na UnB.
+
+Entrada
+
+A entrada compreende os parâmetros da função qualPeriodo, que são três números inteiros m, a e s  (100000000≤m≤500000000,≤a≤2050,s∈{0,1} ) associados ao número de matrícula do aluno, o ano atual e o semestre atual, respectivamente.  É garantido que o ano e o semestre atual do aluno são maiores ou iguais ao ano e semestre de ingresso na UnB. 
+
+Saída
+
+A função qualPeriodo deve retornar em qual semestre o aluno se encontra desde que ingressou na UnB.
+"""
+
+
+def qualPeriodo(registro, ano, semestre):
+    registro = str(registro)
+    ano = int(ano)
+    semestre = int(semestre)
+
+    ano_entrada = int(registro[0] + registro[1])
+    ano_entrada += 2000
+    semestre_entrada = int(registro[3])
+
+    anos_dentro = ano - ano_entrada
+    semestre_dentro = (semestre - semestre_entrada) + (anos_dentro*2)
+    print(semestre_dentro + 1)
