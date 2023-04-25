@@ -1,5 +1,5 @@
-from Projeto_OO_1 import *
-from Cartesian import *
+from my_libraries.Cartesian import *
+from my_libraries.Coordenadas import *
 
 
 
